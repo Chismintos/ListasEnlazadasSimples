@@ -28,9 +28,9 @@ let lista =new ListaOrdenadaSimple();
 // lista.impresion();
 
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10000; i++) {
 
-    lista.insertarInicio(Math.floor(Math.random() * 10000));
+    lista.insertarInicio(Math.floor(Math.random() * 1000));
 }
 
 lista.ordenarBurbuja();
