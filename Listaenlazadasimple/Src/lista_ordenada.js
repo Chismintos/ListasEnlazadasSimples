@@ -13,12 +13,13 @@ export default class ListaOrdenadaSimple extends ListaEnlazadaSimple{
 
     ordenarBurbuja(){
         
-        let cat
         let copy = this.cabeza 
 
-        while(copy !== null){
+        while(copy !== null){  //mientras el enlace no sea null
 
-            while((cat = copy.enlace) !== null){
+            let cat = copy.enlace
+
+            while(cat !== null){   //cat sera el siguiente de copy
                 
                 if(copy.data > cat.data){
                 
@@ -29,14 +30,9 @@ export default class ListaOrdenadaSimple extends ListaEnlazadaSimple{
                 }else{
                     cat = cat.enlace;
 
-                    console.log(`cocos`);
-
                 }
-
-            
-            }
-        
+            }  
+            copy = copy.enlace;
         }
     }
-
 }
