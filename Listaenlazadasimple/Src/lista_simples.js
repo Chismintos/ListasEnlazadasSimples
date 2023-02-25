@@ -21,7 +21,15 @@ export default class ListaEnlazadaSimple{
 
     }
 
-    insertarFinal(){  //proximamente
+    insertarFinal(data){  //proximamente
+        const nuevo = new Nodo(data);
+        let temp = this.cabeza
+
+        while (temp.enlace !== null) {
+            temp = temp.enlace
+        }
+
+        temp.enlace = nuevo
 
     }
 
@@ -87,14 +95,13 @@ export default class ListaEnlazadaSimple{
         do{
             valores += `${temp.data} -> `;
             temp = temp.enlace;
-            console.log('cocos');
+            // console.log('cocos');
 
 
         }while(temp !== null);         //se cumple mientras el dato no sea nullo
         console.log(valores + 'null')
         
     }
-    
     
 
 }
