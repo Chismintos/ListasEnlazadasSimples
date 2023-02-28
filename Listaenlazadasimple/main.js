@@ -4,6 +4,8 @@ import ListaOrdenadaSimple from "./Src/lista_ordenada.js";
 // let lista =new ListaEnlazadaSimple();
 let lista =new ListaOrdenadaSimple();
 
+
+
 // lista.insertarInicio(10);
 // lista.insertarInicio(70);
 // lista.insertarInicio(1);
@@ -28,12 +30,24 @@ let lista =new ListaOrdenadaSimple();
 // lista.impresion();
 
 
-for (let i = 0; i < 10000; i++) {
+//insertar x datos randoms 
+let entry = 100   //sin codigo como 21 segundos en ejecutar
 
-    lista.insertarInicio(Math.floor(Math.random() * 1000));
+for (let i = 0; i < entry; i++) {
+
+    lista.insertarInicio(Math.floor(Math.random() * entry));
 }
 
-lista.ordenarBurbuja();
+//metodo console.time() y console.timeEnd() para medir el tiempo de ejecucion
+
+// console.time("loop")
+// lista.ordenarBurbuja();
+// lista.impresion();
+// console.timeEnd("loop")
+
+
+
+lista.ordenarIntercambio();
 lista.impresion();
 
 
